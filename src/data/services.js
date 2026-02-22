@@ -1,0 +1,95 @@
+import { FaServer, FaNetworkWired, FaBuilding, FaTools, FaShieldAlt, FaBrain, FaClipboardList } from 'react-icons/fa';
+
+export const services = [
+  {
+    id: 'sitc',
+    Icon: FaServer,
+    title: 'System Integration (SITC)',
+    shortTitle: 'System Integration',
+    description: 'Complete Supply, Installation, Testing & Commissioning of integrated technology systems. We manage the full project lifecycle from procurement through handover, ensuring every component works in harmony.',
+    bullets: [
+      'End-to-end project lifecycle management',
+      'Multi-vendor technology integration',
+      'Factory acceptance and site acceptance testing',
+      'Seamless commissioning and handover',
+    ],
+  },
+  {
+    id: 'elv-it',
+    Icon: FaNetworkWired,
+    title: 'ELV & IT Infrastructure',
+    shortTitle: 'ELV & IT Infra',
+    description: 'Design and deployment of Extra Low Voltage systems and enterprise IT infrastructure including structured cabling, networking, and server room builds.',
+    bullets: [
+      'Structured cabling (copper & fiber)',
+      'Network design and deployment',
+      'Server room and data center builds',
+      'ELV system design and integration',
+    ],
+  },
+  {
+    id: 'smart-building',
+    Icon: FaBuilding,
+    title: 'Smart Building & Automation',
+    shortTitle: 'Smart Buildings',
+    description: 'Transform conventional buildings into intelligent, automated environments with integrated BMS, energy management, and IoT-enabled monitoring.',
+    bullets: [
+      'Building Management System integration',
+      'Energy monitoring and optimization',
+      'IoT sensor deployment and analytics',
+      'Automated environment controls',
+    ],
+  },
+  {
+    id: 'camc-amc',
+    Icon: FaTools,
+    title: 'CAMC / AMC',
+    shortTitle: 'CAMC / AMC',
+    description: 'Comprehensive and Annual Maintenance Contracts ensuring your systems operate at peak performance with minimal downtime through preventive and corrective maintenance.',
+    bullets: [
+      'Preventive maintenance schedules',
+      '24/7 corrective support',
+      'Spare parts management',
+      'Performance reporting and SLA tracking',
+    ],
+  },
+  {
+    id: 'compliance',
+    Icon: FaShieldAlt,
+    title: 'Statutory Compliance',
+    shortTitle: 'Compliance',
+    description: 'Navigate complex regulatory requirements with our compliance management services covering fire safety, electrical standards, and building codes.',
+    bullets: [
+      'Fire safety compliance (NBC/IS standards)',
+      'Electrical safety audits',
+      'Building code adherence',
+      'Documentation and certification support',
+    ],
+  },
+  {
+    id: 'iot-ai',
+    Icon: FaBrain,
+    title: 'IoT/AI Software Solutions',
+    shortTitle: 'IoT / AI Software',
+    description: 'Bespoke software solutions leveraging IoT data streams and AI algorithms for predictive maintenance, anomaly detection, and operational intelligence.',
+    bullets: [
+      'Custom IoT platform development',
+      'AI/ML model integration',
+      'Real-time dashboards and analytics',
+      'Predictive maintenance solutions',
+    ],
+  },
+  {
+    id: 'pm-consulting',
+    Icon: FaClipboardList,
+    title: 'Project Management & Consulting',
+    shortTitle: 'PM & Consulting',
+    description: 'Strategic consulting and project management services to plan, execute, and deliver technology projects on time and within budget.',
+    bullets: [
+      'Feasibility studies and technology audits',
+      'Vendor evaluation and selection',
+      'Project planning and execution',
+      'Quality assurance and delivery management',
+    ],
+  },
+];
