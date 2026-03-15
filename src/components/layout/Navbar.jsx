@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FaBars, FaTimes } from 'react-icons/fa';
+import ElvionLogo from '../ui/ElvionLogo';
 import styles from './Navbar.module.css';
 
 const navLinks = [
@@ -37,8 +38,7 @@ function Navbar() {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <Link to="home" smooth duration={600} className={styles.logo} offset={-72}>
-          <span className={styles.logoText}>Elvion</span>
-          <span className={styles.logoAccent}>Systems</span>
+          <ElvionLogo height={36} variant="full" />
         </Link>
 
         <div className={styles.desktopNav}>

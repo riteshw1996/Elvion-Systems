@@ -40,13 +40,13 @@ function Hero() {
           animate="visible"
         >
           <motion.span className={styles.badge} variants={itemVariants}>
-            Turnkey System Integrator
+            Turnkey System Integrator | Est. 2025
           </motion.span>
           <motion.h1 className={styles.headline} variants={itemVariants}>
-            Redefining <span className={styles.highlight}>Technology</span> Integration Since 2019
+            Integrating <span className={styles.highlight}>Innovation</span> with Infrastructure
           </motion.h1>
           <motion.p className={styles.subheadline} variants={itemVariants}>
-            Premier ELV, IT Infrastructure & Smart Building Solutions provider with PAN India operations and global technology partnerships.
+            We serve value, not just services. Elvion Systems is a turnkey system integrator with core expertise in ELV, IT Infrastructure, Infra Automation & Smart Solutions — with PAN India operations and global technology partnerships.
           </motion.p>
           <motion.div className={styles.buttons} variants={itemVariants}>
             <Link to="services" smooth duration={600} offset={-72} className={styles.btnPrimary}>

@@ -41,7 +41,7 @@
   font-family: var(--font-mono);
   font-size: 4rem;
   font-weight: 500;
-  color: var(--orange-500);
+  color: var(--blue-500);
   opacity: 0.2;
 }
 
@@ -87,7 +87,7 @@
   font-family: var(--font-mono);
   font-size: 0.85rem;
   font-weight: 500;
-  color: var(--orange-500);
+  color: var(--blue-500);
 }
 
 .progressTrack {
@@ -100,7 +100,7 @@
 
 .progressBar {
   height: 100%;
-  background: linear-gradient(90deg, var(--orange-500), var(--orange-400));
+  background: linear-gradient(90deg, var(--blue-500), var(--blue-400));
   border-radius: 4px;
 }
 
@@ -145,7 +145,7 @@
   align-items: center;
   gap: 8px;
   padding: 14px 32px;
-  background: var(--orange-500);
+  background: var(--blue-500);
   color: var(--white);
   font-weight: 600;
   font-size: 0.95rem;
@@ -155,9 +155,9 @@
 }
 
 .ctaBtn:hover {
-  background: var(--orange-600);
+  background: var(--blue-600);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(242, 140, 40, 0.4);
+  box-shadow: 0 4px 16px rgba(30, 111, 217, 0.4);
 }
 
 @media (min-width: 768px) {

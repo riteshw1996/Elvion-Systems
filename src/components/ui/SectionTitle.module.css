@@ -12,7 +12,7 @@
   font-weight: 700;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--orange-500);
+  color: var(--blue-500);
   margin-bottom: 12px;
 }
 
@@ -32,7 +32,7 @@
 .rule {
   width: 60px;
   height: 3px;
-  background: var(--orange-500);
+  background: linear-gradient(90deg, var(--blue-500), var(--blue-400));
   border-radius: 2px;
 }
 

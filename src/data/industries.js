@@ -1,46 +1,34 @@
-import { FaCity, FaLandmark, FaGraduationCap, FaBriefcase, FaIndustry, FaHospital, FaHotel } from 'react-icons/fa';
+import { FaCity, FaLandmark, FaGraduationCap, FaBriefcase, FaIndustry } from 'react-icons/fa';
 
 export const industries = [
   {
     id: 'smart-cities',
     Icon: FaCity,
-    title: 'Smart Cities',
-    description: 'End-to-end technology integration for smart city infrastructure including ITMS, surveillance, and command centers.',
+    title: 'Smart Cities & Urban Development',
+    description: 'End-to-end technology integration for smart city infrastructure including ITMS, smart surveillance, and centralized command centers.',
   },
   {
     id: 'government',
     Icon: FaLandmark,
-    title: 'Government Infrastructure',
-    description: 'Secure, compliant technology solutions for government buildings, public utilities, and civic infrastructure.',
+    title: 'Government & Public Infrastructure',
+    description: 'Secure, compliant technology solutions for government buildings, public utilities, and civic infrastructure projects.',
   },
   {
     id: 'education',
     Icon: FaGraduationCap,
-    title: 'Education',
-    description: 'Smart campus solutions with integrated security, public address, and building management systems.',
+    title: 'Education & Institutional Campuses',
+    description: 'Smart campus solutions with integrated security, public address, BMS, and campus-wide IT infrastructure.',
   },
   {
-    id: 'corporate',
+    id: 'it-parks',
     Icon: FaBriefcase,
-    title: 'Corporate Offices',
-    description: 'Modern workplace technology including access control, smart building automation, and IT infrastructure.',
+    title: 'IT Parks & Corporate Offices',
+    description: 'Modern workplace technology including access control, smart building automation, AV systems, and IT infrastructure.',
   },
   {
-    id: 'manufacturing',
+    id: 'warehousing',
     Icon: FaIndustry,
-    title: 'Manufacturing & Warehousing',
-    description: 'Industrial automation, fire safety, surveillance, and IoT-enabled monitoring for manufacturing facilities.',
-  },
-  {
-    id: 'healthcare',
-    Icon: FaHospital,
-    title: 'Healthcare',
-    description: 'Critical infrastructure solutions for hospitals including fire safety, nurse call systems, and access control.',
-  },
-  {
-    id: 'hospitality',
-    Icon: FaHotel,
-    title: 'Hospitality',
-    description: 'Guest experience enhancement through smart room controls, integrated security, and building management.',
+    title: 'Warehousing & Manufacturing',
+    description: 'Industrial automation, fire safety, surveillance, and IoT-enabled monitoring for warehousing and manufacturing facilities.',
   },
 ];

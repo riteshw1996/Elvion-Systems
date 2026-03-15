@@ -1,15 +1,16 @@
 :root {
   /* Navy palette */
-  --navy-900: #0A1628;
-  --navy-800: #0F2035;
-  --navy-700: #162D4A;
-  --navy-600: #1E3A5F;
-  --navy-100: #E8EDF4;
+  --navy-900: #060E1E;
+  --navy-800: #0B1A30;
+  --navy-700: #122645;
+  --navy-600: #1A3358;
+  --navy-100: #E6EEF8;
 
-  /* Orange accent */
-  --orange-600: #D97706;
-  --orange-500: #F28C28;
-  --orange-400: #FBAD5C;
+  /* Blue accent */
+  --blue-600: #1558B0;
+  --blue-500: #1E6FD9;
+  --blue-400: #4B9AFF;
+  --blue-300: #7CB8FF;
 
   /* Neutrals */
   --white: #FFFFFF;

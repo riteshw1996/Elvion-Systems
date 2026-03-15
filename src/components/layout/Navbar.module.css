@@ -9,7 +9,7 @@
 }
 
 .scrolled {
-  background: rgba(10, 22, 40, 0.95);
+  background: rgba(6, 14, 30, 0.95);
   backdrop-filter: blur(8px);
   padding: 10px 0;
   box-shadow: 0 2px 20px rgba(0, 0, 0, 0.3);
@@ -40,7 +40,7 @@
   font-family: var(--font-heading);
   font-size: 1.6rem;
   font-weight: 800;
-  color: var(--orange-500);
+  color: var(--blue-500);
 }
 
 .desktopNav {
@@ -62,11 +62,11 @@
 .navLink:hover,
 .navLink.active {
   color: var(--white);
-  border-bottom-color: var(--orange-500);
+  border-bottom-color: var(--blue-500);
 }
 
 .ctaBtn {
-  background: var(--orange-500);
+  background: var(--blue-500);
   color: var(--white);
   padding: 10px 24px;
   border-radius: 8px;
@@ -77,9 +77,9 @@
 }
 
 .ctaBtn:hover {
-  background: var(--orange-600);
+  background: var(--blue-600);
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(242, 140, 40, 0.4);
+  box-shadow: 0 4px 12px rgba(30, 111, 217, 0.4);
 }
 
 .hamburger {
@@ -121,11 +121,11 @@
 
 .mobileLink:hover,
 .mobileLink.active {
-  color: var(--orange-500);
+  color: var(--blue-500);
 }
 
 .mobileCta {
-  background: var(--orange-500);
+  background: var(--blue-500);
   color: var(--white);
   padding: 14px 36px;
   border-radius: 8px;
@@ -137,7 +137,7 @@
 }
 
 .mobileCta:hover {
-  background: var(--orange-600);
+  background: var(--blue-600);
 }
 
 @media (min-width: 768px) {

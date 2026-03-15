@@ -1,6 +1,7 @@
 import { Link } from 'react-scroll';
 import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
 import { services } from '../../data/services';
+import ElvionLogo from '../ui/ElvionLogo';
 import styles from './Footer.module.css';
 
 const quickLinks = [
@@ -20,15 +21,14 @@ function Footer() {
         <div className={styles.grid}>
           <div className={styles.col}>
             <div className={styles.logo}>
-              <span className={styles.logoText}>Elvion</span>
-              <span className={styles.logoAccent}>Systems</span>
+              <ElvionLogo height={32} variant="full" />
             </div>
             <p className={styles.desc}>
-              Premier turnkey system integrator specializing in ELV, IT Infrastructure,
-              and Smart Building Solutions since 2019.
+              A turnkey system integrator with core expertise in ELV, IT Infrastructure,
+              Infra Automation & Smart Solutions since 2025.
             </p>
             <div className={styles.socials}>
-              <a href="#" className={styles.socialLink} aria-label="LinkedIn"><FaLinkedin /></a>
+              <a href="https://www.linkedin.com/company/elvionsystems/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn"><FaLinkedin /></a>
               <a href="#" className={styles.socialLink} aria-label="Twitter"><FaTwitter /></a>
               <a href="#" className={styles.socialLink} aria-label="Instagram"><FaInstagram /></a>
             </div>
@@ -92,7 +92,7 @@ function Footer() {
         </div>
 
         <div className={styles.bottom}>
-          <p>&copy; 2019-{new Date().getFullYear()} Elvion Systems Pvt. Ltd. All rights reserved.</p>
+          <p>&copy; 2025-{new Date().getFullYear()} Elvion Systems Pvt. Ltd. All rights reserved.</p>
           <p>Designed & Developed with precision.</p>
         </div>
       </div>

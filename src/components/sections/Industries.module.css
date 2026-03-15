@@ -16,6 +16,11 @@
   display: flex;
   align-items: flex-end;
   cursor: default;
+  transition: box-shadow 0.4s ease;
+}
+
+.card:hover {
+  box-shadow: 0 0 30px rgba(30, 111, 217, 0.2);
 }
 
 .cardBg {
@@ -34,7 +39,7 @@
 
 .iconBg {
   font-size: 4rem;
-  color: var(--orange-500);
+  color: var(--blue-500);
   opacity: 0.08;
 }
 
@@ -58,7 +63,7 @@
   font-weight: 700;
   color: var(--white);
   margin-bottom: 6px;
-  border-bottom: 2px solid var(--orange-500);
+  border-bottom: 2px solid var(--blue-500);
   padding-bottom: 8px;
   display: inline-block;
 }
@@ -86,17 +91,11 @@
 
 @media (min-width: 1024px) {
   .grid {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
   }
 
-  .grid > :nth-child(n+5) {
-    grid-column: span 1;
-  }
-}
-
-/* Center the last row if it has fewer items */
-@media (min-width: 1024px) {
-  .grid {
-    justify-content: center;
+  .card {
+    width: 100%;
   }
 }

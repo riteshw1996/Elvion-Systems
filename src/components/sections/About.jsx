@@ -1,24 +1,17 @@
 import { motion } from 'framer-motion';
-import { FaCogs, FaHandshake, FaProjectDiagram } from 'react-icons/fa';
+import { FaMicrochip, FaGlobe, FaUserShield, FaHandshake, FaShieldAlt, FaCogs, FaComments, FaChartLine, FaFlag, FaEye } from 'react-icons/fa';
 import SectionTitle from '../ui/SectionTitle';
 import styles from './About.module.css';
 
-const values = [
-  {
-    Icon: FaCogs,
-    title: 'Technical Excellence',
-    description: '150+ certified professionals delivering precision-engineered solutions across ELV, IT, and smart building domains.',
-  },
-  {
-    Icon: FaHandshake,
-    title: 'Client-First Approach',
-    description: '95% client retention through transparent, accountable partnerships and dedicated project ownership.',
-  },
-  {
-    Icon: FaProjectDiagram,
-    title: 'End-to-End Delivery',
-    description: 'From consulting and design to deployment, commissioning, and ongoing AMC support — we cover the full lifecycle.',
-  },
+const strengths = [
+  { Icon: FaMicrochip, title: 'Tech-Driven & Future-Focused' },
+  { Icon: FaGlobe, title: 'Global Technology Tie-Ups' },
+  { Icon: FaUserShield, title: 'Experienced & Certified Professionals' },
+  { Icon: FaHandshake, title: 'High Client Retention Rate' },
+  { Icon: FaShieldAlt, title: 'EH&S Compliance' },
+  { Icon: FaCogs, title: 'End-to-End Capabilities' },
+  { Icon: FaComments, title: 'Transparent Communication' },
+  { Icon: FaChartLine, title: 'Strong Project Management' },
 ];
 
 function About() {
@@ -35,37 +28,61 @@ function About() {
           >
             <SectionTitle label="ABOUT US" title="Who We Are" centered={false} />
             <p className={styles.description}>
-              Founded in 2019, Elvion Systems Pvt. Ltd. is a premier turnkey system integrator
-              specializing in ELV, IT Infrastructure, and Smart Building Solutions. With PAN India
-              operations and global technology partnerships, we deliver comprehensive technology
-              solutions that transform spaces into intelligent, connected environments.
-            </p>
-            <p className={styles.description}>
-              Our tech-driven, future-focused approach combines deep domain expertise with
-              cutting-edge technology to serve clients across Smart Cities, Government Infrastructure,
-              Education, Healthcare, Corporate, and Hospitality sectors.
+              Established in 2025, Elvion Systems Private Limited is a turnkey system integrator
+              with core expertise in ELV, IT Infrastructure, Infra Automation, and Smart Solutions.
+              With PAN India operations and global technology partnerships, we deliver everything
+              from Fire Alarm Systems to intelligent building integration.
             </p>
 
-            <div className={styles.values}>
-              {values.map((value, index) => (
-                <motion.div
-                  key={value.title}
-                  className={styles.valueItem}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.4, delay: index * 0.1 }}
-                >
-                  <div className={styles.iconCircle}>
-                    <value.Icon />
-                  </div>
-                  <div>
-                    <h4 className={styles.valueTitle}>{value.title}</h4>
-                    <p className={styles.valueDesc}>{value.description}</p>
-                  </div>
-                </motion.div>
-              ))}
+            <div className={styles.missionVision}>
+              <motion.div
+                className={styles.mvBlock}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.1 }}
+              >
+                <div className={styles.mvIcon}>
+                  <FaFlag />
+                </div>
+                <div>
+                  <h4 className={styles.mvTitle}>Our Mission</h4>
+                  <p className={styles.mvText}>
+                    To empower clients through innovative, integrated technologies like IoT and AI —
+                    delivering intelligent systems that solve real-world problems and drive digital transformation.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className={styles.mvBlock}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.4, delay: 0.2 }}
+              >
+                <div className={styles.mvIcon}>
+                  <FaEye />
+                </div>
+                <div>
+                  <h4 className={styles.mvTitle}>Our Vision</h4>
+                  <p className={styles.mvText}>
+                    To become a globally recognized leader in smart infrastructure and system integration,
+                    known for excellence, innovation, and value creation across industries.
+                  </p>
+                </div>
+              </motion.div>
             </div>
+
+            <motion.blockquote
+              className={styles.motto}
+              initial={{ opacity: 0 }}
+              whileInView={{ opacity: 1 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.3 }}
+            >
+              &ldquo;We serve value, not just services.&rdquo;
+            </motion.blockquote>
           </motion.div>
 
           <motion.div
@@ -75,15 +92,23 @@ function About() {
             viewport={{ once: true, margin: '-80px' }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            <div className={styles.imageFrame}>
-              <div className={styles.imagePlaceholder}>
-                <div className={styles.placeholderContent}>
-                  <span className={styles.placeholderIcon}>&#9670;</span>
-                  <span className={styles.placeholderText}>Elvion Systems</span>
-                  <span className={styles.placeholderSub}>Building Smarter Spaces</span>
-                </div>
-              </div>
-              <div className={styles.frameDecor} />
+            <h3 className={styles.strengthsTitle}>Our Strengths</h3>
+            <div className={styles.strengthsGrid}>
+              {strengths.map((item, index) => (
+                <motion.div
+                  key={item.title}
+                  className={styles.strengthCard}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.3, delay: index * 0.06 }}
+                >
+                  <div className={styles.strengthIcon}>
+                    <item.Icon />
+                  </div>
+                  <span className={styles.strengthLabel}>{item.title}</span>
+                </motion.div>
+              ))}
             </div>
           </motion.div>
         </div>

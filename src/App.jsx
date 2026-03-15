@@ -3,7 +3,9 @@ import Hero from './components/sections/Hero';
 import About from './components/sections/About';
 import Services from './components/sections/Services';
 import Products from './components/sections/Products';
+import Partners from './components/sections/Partners';
 import Industries from './components/sections/Industries';
+import ProjectApproach from './components/sections/ProjectApproach';
 import Projects from './components/sections/Projects';
 import Stats from './components/sections/Stats';
 import Contact from './components/sections/Contact';
@@ -20,7 +22,9 @@ function App() {
         <About />
         <Services />
         <Products />
+        <Partners />
         <Industries />
+        <ProjectApproach />
         <Projects />
         <Stats />
         <Contact />

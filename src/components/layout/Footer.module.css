@@ -32,7 +32,7 @@
   font-family: var(--font-heading);
   font-size: 1.4rem;
   font-weight: 800;
-  color: var(--orange-500);
+  color: var(--blue-500);
 }
 
 .desc {
@@ -61,7 +61,7 @@
 }
 
 .socialLink:hover {
-  background: var(--orange-500);
+  background: var(--blue-500);
   color: var(--white);
 }
 
@@ -72,7 +72,7 @@
   color: var(--white);
   margin-bottom: 20px;
   padding-bottom: 10px;
-  border-bottom: 2px solid var(--orange-500);
+  border-bottom: 2px solid var(--blue-500);
   display: inline-block;
 }
 
@@ -90,7 +90,7 @@
 }
 
 .footerLink:hover {
-  color: var(--orange-500);
+  color: var(--blue-500);
 }
 
 /* Contact items */
@@ -115,13 +115,13 @@
 }
 
 .contactItem a:hover {
-  color: var(--orange-500);
+  color: var(--blue-500);
 }
 
 .contactIcon {
   flex-shrink: 0;
   margin-top: 3px;
-  color: var(--orange-500);
+  color: var(--blue-500);
 }
 
 /* Bottom bar */
