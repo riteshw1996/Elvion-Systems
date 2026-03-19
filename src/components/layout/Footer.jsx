@@ -1,5 +1,6 @@
+import { useState, useEffect } from 'react';
 import { Link } from 'react-scroll';
-import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaEnvelope, FaPhone, FaMapMarkerAlt, FaLinkedin, FaGoogle, FaStar, FaTimes } from 'react-icons/fa';
 import { services } from '../../data/services';
 import ElvionLogo from '../ui/ElvionLogo';
 import styles from './Footer.module.css';
@@ -15,13 +16,22 @@ const quickLinks = [
 ];
 
 function Footer() {
+  const [showReviews, setShowReviews] = useState(false);
+
+  useEffect(() => {
+    if (!showReviews) return;
+    const handleEsc = (e) => { if (e.key === 'Escape') setShowReviews(false); };
+    document.addEventListener('keydown', handleEsc);
+    return () => document.removeEventListener('keydown', handleEsc);
+  }, [showReviews]);
+
   return (
     <footer className={styles.footer}>
       <div className="container">
         <div className={styles.grid}>
           <div className={styles.col}>
             <div className={styles.logo}>
-              <ElvionLogo height={32} variant="full" />
+              <ElvionLogo height={48} variant="full" dark />
             </div>
             <p className={styles.desc}>
               A turnkey system integrator with core expertise in ELV, IT Infrastructure,
@@ -29,8 +39,7 @@ function Footer() {
             </p>
             <div className={styles.socials}>
               <a href="https://www.linkedin.com/company/elvionsystems/posts/?feedView=all" target="_blank" rel="noopener noreferrer" className={styles.socialLink} aria-label="LinkedIn"><FaLinkedin /></a>
-              <a href="#" className={styles.socialLink} aria-label="Twitter"><FaTwitter /></a>
-              <a href="#" className={styles.socialLink} aria-label="Instagram"><FaInstagram /></a>
+              <button onClick={() => setShowReviews(true)} className={styles.socialLink} aria-label="Google Reviews"><FaGoogle /></button>
             </div>
           </div>
 
@@ -77,7 +86,7 @@ function Footer() {
             <div className={styles.contactItems}>
               <div className={styles.contactItem}>
                 <FaEnvelope className={styles.contactIcon} />
-                <a href="mailto:hitesh@elvionsystems.com">hitesh@elvionsystems.com</a>
+                <a href="mailto:info@elvionsystems.com">info@elvionsystems.com</a>
               </div>
               <div className={styles.contactItem}>
                 <FaPhone className={styles.contactIcon} />
@@ -85,7 +94,7 @@ function Footer() {
               </div>
               <div className={styles.contactItem}>
                 <FaMapMarkerAlt className={styles.contactIcon} />
-                <span>207 A5 Tulip Lemon, Near Spaze Corporate Plaza, Sector 69, Gurugram, HR, 122101</span>
+                <span>207, A5 Tulip Lemon, Sector 69, Gurugram, Haryana, 122101</span>
               </div>
             </div>
           </div>
@@ -93,9 +102,29 @@ function Footer() {
 
         <div className={styles.bottom}>
           <p>&copy; 2025-{new Date().getFullYear()} Elvion Systems Pvt. Ltd. All rights reserved.</p>
-          <p>Designed & Developed with precision.</p>
+          <p>Designed & Developed by Walia's</p>
         </div>
       </div>
+
+      {showReviews && (
+        <div className={styles.reviewsOverlay} onClick={() => setShowReviews(false)}>
+          <div className={styles.reviewsModal} onClick={(e) => e.stopPropagation()}>
+            <button className={styles.reviewsClose} onClick={() => setShowReviews(false)} aria-label="Close">
+              <FaTimes />
+            </button>
+            <div className={styles.reviewsGoogleIcon}>
+              <FaGoogle />
+            </div>
+            <h3 className={styles.reviewsTitle}>Our Google Reviews</h3>
+            <div className={styles.reviewsStars}>
+              {[...Array(5)].map((_, i) => <FaStar key={i} className={styles.star} />)}
+            </div>
+            <p className={styles.reviewsSubtext}>Scan the QR code to see our reviews and share your experience</p>
+            <img src="/images/qr_google.png" alt="Scan to review Elvion Systems on Google" className={styles.reviewsQr} />
+            <p className={styles.reviewsCta}>Point your phone camera at the QR code</p>
+          </div>
+        </div>
+      )}
     </footer>
   );
 }

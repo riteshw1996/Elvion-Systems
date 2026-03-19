@@ -12,7 +12,7 @@ function Services() {
   return (
     <section className={`${styles.services} section-padding`} id="services">
       <div className="container">
-        <SectionTitle label="OUR SERVICES" title="Comprehensive Technology Solutions" light />
+        <SectionTitle label="OUR SERVICES" title="Comprehensive Technology Solutions" />
 
         <div className={styles.tabs}>
           {services.map((service, index) => (

@@ -1,7 +1,7 @@
 export const stats = [
   {
     id: 'professionals',
-    target: 150,
+    target: 100,
     suffix: '+',
     label: 'Certified Professionals',
   },

@@ -1,6 +1,6 @@
 .stats {
   position: relative;
-  background: var(--navy-900);
+  background: linear-gradient(135deg, #eef4fc 0%, #f7f9fd 100%);
   padding: 64px 0;
   overflow: hidden;
 }
@@ -9,13 +9,13 @@
   position: absolute;
   inset: 0;
   background-image:
-    linear-gradient(30deg, var(--navy-800) 12%, transparent 12.5%, transparent 87%, var(--navy-800) 87.5%, var(--navy-800)),
-    linear-gradient(150deg, var(--navy-800) 12%, transparent 12.5%, transparent 87%, var(--navy-800) 87.5%, var(--navy-800)),
-    linear-gradient(30deg, var(--navy-800) 12%, transparent 12.5%, transparent 87%, var(--navy-800) 87.5%, var(--navy-800)),
-    linear-gradient(150deg, var(--navy-800) 12%, transparent 12.5%, transparent 87%, var(--navy-800) 87.5%, var(--navy-800));
+    linear-gradient(30deg, var(--navy-100) 12%, transparent 12.5%, transparent 87%, var(--navy-100) 87.5%, var(--navy-100)),
+    linear-gradient(150deg, var(--navy-100) 12%, transparent 12.5%, transparent 87%, var(--navy-100) 87.5%, var(--navy-100)),
+    linear-gradient(30deg, var(--navy-100) 12%, transparent 12.5%, transparent 87%, var(--navy-100) 87.5%, var(--navy-100)),
+    linear-gradient(150deg, var(--navy-100) 12%, transparent 12.5%, transparent 87%, var(--navy-100) 87.5%, var(--navy-100));
   background-size: 80px 140px;
   background-position: 0 0, 0 0, 40px 70px, 40px 70px;
-  opacity: 0.15;
+  opacity: 0.3;
   pointer-events: none;
 }
 

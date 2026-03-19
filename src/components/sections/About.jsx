@@ -30,9 +30,10 @@ function About() {
             <p className={styles.description}>
               Established in 2025, Elvion Systems Private Limited is a turnkey system integrator
               with core expertise in ELV, IT Infrastructure, Infra Automation, and Smart Solutions.
-              With PAN India operations and global technology partnerships, we deliver everything
+              With Global operations and technology partnerships, we deliver everything
               from Fire Alarm Systems to intelligent building integration.
             </p>
+            <p className={styles.cin}>CIN: U46599HR2025PTC135246</p>
 
             <div className={styles.missionVision}>
               <motion.div

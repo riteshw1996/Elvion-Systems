@@ -7,7 +7,7 @@ function Industries() {
   return (
     <section className={`${styles.industries} section-padding`} id="industries">
       <div className="container">
-        <SectionTitle label="INDUSTRIES WE SERVE" title="Trusted Across Sectors" light />
+        <SectionTitle label="INDUSTRIES WE SERVE" title="Trusted Across Sectors" />
 
         <div className={styles.grid}>
           {industries.map((industry, index) => (

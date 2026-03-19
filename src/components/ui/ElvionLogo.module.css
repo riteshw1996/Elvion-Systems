@@ -1,0 +1,50 @@
+.logoWrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.logoImg {
+  width: auto;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.logoLight {
+  mix-blend-mode: multiply;
+}
+
+.logoDark {
+  border-radius: 6px;
+}
+
+.logoText {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.15;
+}
+
+.companyName {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #0B1A3A;
+  white-space: nowrap;
+}
+
+.textDark .companyName {
+  color: var(--white);
+}
+
+.textDark .pvtLtd {
+  color: var(--gray-300);
+}
+
+.pvtLtd {
+  font-family: var(--font-heading);
+  font-size: 0.7rem;
+  font-weight: 600;
+  color: #0B1A3A;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}

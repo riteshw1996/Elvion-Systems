@@ -5,11 +5,14 @@ import SectionTitle from '../ui/SectionTitle';
 import { services } from '../../data/services';
 import styles from './Contact.module.css';
 
+const WEB3FORMS_URL = 'https://api.web3forms.com/submit';
+const WEB3FORMS_KEY = 'fb79b864-e6e8-40a2-b44f-109f2ac81a86';
+
 const contactInfo = [
-  { Icon: FaEnvelope, label: 'Email', value: 'hitesh@elvionsystems.com', href: 'mailto:hitesh@elvionsystems.com' },
+  { Icon: FaEnvelope, label: 'Email', value: 'info@elvionsystems.com', href: 'mailto:info@elvionsystems.com' },
   { Icon: FaPhone, label: 'Phone', value: '+91-97362-56900', href: 'tel:+919736256900' },
-  { Icon: FaMapMarkerAlt, label: 'Address', value: '207 A5 Tulip Lemon, Near Spaze Corporate Plaza, Sector 69, Gurugram, HR, 122101', href: null },
-  { Icon: FaGlobe, label: 'Operations', value: 'PAN India with Global Partnerships', href: null },
+  { Icon: FaMapMarkerAlt, label: 'Address', value: '207, A5 Tulip Lemon, Sector 69, Gurugram, Haryana, 122101', href: null },
+  { Icon: FaGlobe, label: 'Operations', value: 'Global Operations', href: null },
 ];
 
 function Contact() {
@@ -41,10 +44,31 @@ function Contact() {
     if (!validate()) return;
     setLoading(true);
 
-    // Simulate form submission (replace with Formspree endpoint)
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-    setLoading(false);
-    setSubmitted(true);
+    try {
+      const res = await fetch(WEB3FORMS_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_KEY,
+          name: formData.name,
+          email: formData.email,
+          phone: formData.phone,
+          company: formData.company || 'N/A',
+          service: formData.service || 'N/A',
+          message: formData.message,
+          from_name: 'Elvion Systems Website',
+          subject: `New Inquiry from ${formData.name}`,
+          replyto: formData.email,
+          botcheck: false,
+        }),
+      });
+      if (!res.ok) throw new Error('Failed');
+      setSubmitted(true);
+    } catch {
+      setErrors({ submit: 'Failed to send. Please try again or email us at info@elvionsystems.com' });
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -184,6 +208,7 @@ function Contact() {
                       </>
                     )}
                   </button>
+                  {errors.submit && <p className={styles.errorMsg}>{errors.submit}</p>}
                 </form>
               ) : (
                 <div className={styles.successState}>
