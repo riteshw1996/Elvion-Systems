@@ -11,7 +11,7 @@ function ElvionLogo({ height = 44, variant = 'full', dark = false }) {
       />
       {variant === 'full' && (
         <div className={`${styles.logoText} ${dark ? styles.textDark : ''}`}>
-          <span className={styles.companyName}>Elvion Systems</span>
+          <span className={styles.companyName}>ELVION SYSTEMS</span>
           <span className={styles.pvtLtd}>Private Limited</span>
         </div>
       )}
