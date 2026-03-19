@@ -38,7 +38,7 @@ function Navbar() {
     <nav className={`${styles.navbar} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <Link to="home" smooth duration={600} className={styles.logo} offset={-72}>
-          <ElvionLogo height={52} variant="full" />
+          <ElvionLogo height={62} variant="full" />
         </Link>
 
         <div className={styles.desktopNav}>

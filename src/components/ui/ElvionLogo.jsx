@@ -4,7 +4,7 @@ function ElvionLogo({ height = 44, variant = 'full', dark = false }) {
   return (
     <div className={styles.logoWrap}>
       <img
-        src="/images/logo.jpeg"
+        src="/images/logo.png"
         alt="Elvion Systems"
         className={`${styles.logoImg} ${dark ? styles.logoDark : styles.logoLight}`}
         style={{ height: `${height}px` }}

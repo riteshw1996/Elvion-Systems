@@ -1,7 +1,7 @@
 .logoWrap {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
 }
 
 .logoImg {
@@ -10,12 +10,11 @@
   object-fit: contain;
 }
 
-.logoLight {
-  mix-blend-mode: multiply;
-}
-
 .logoDark {
   border-radius: 6px;
+}
+
+.logoLight {
 }
 
 .logoText {
@@ -26,9 +25,9 @@
 
 .companyName {
   font-family: var(--font-heading);
-  font-size: 1.15rem;
+  font-size: 1.75rem;
   font-weight: 800;
-  color: #0B1A3A;
+  color: #0F2A55;
   white-space: nowrap;
 }
 
@@ -42,9 +41,10 @@
 
 .pvtLtd {
   font-family: var(--font-heading);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  color: #0B1A3A;
+  color: var(--blue-500);
   letter-spacing: 1.5px;
-  text-transform: uppercase;
+  text-transform: none;
+  opacity: 0.7;
 }
